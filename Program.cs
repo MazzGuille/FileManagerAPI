@@ -41,7 +41,7 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddCors(options =>
 
     options.AddPolicy("AllowWebApp", builder => builder
-                                       .WithOrigins(new { "http://localhost:5173" })
+                                       .WithOrigins("http://localhost:5173")
                                        .AllowCredentials()
                                        .AllowAnyHeader()
                                        .AllowAnyMethod()
