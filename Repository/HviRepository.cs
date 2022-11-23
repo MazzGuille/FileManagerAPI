@@ -17,8 +17,10 @@ namespace FileManagerAPI.Repository
             try
             {
 
-                using (SqlConnection cn = new(sqlString.GetCadenaSQL()))
-                {
+                //using (SqlConnection cn = new(sqlString.GetCadenaSQL()))
+                //{
+                    //cn.Open();
+                    //var cmd = new SqlCommand("SP_GetData", cn);
 
                     model.ForEach(x =>
                     {
@@ -30,19 +32,19 @@ namespace FileManagerAPI.Repository
                         var COLORGRADE = x.COLORGRADE;
                         var TRASHID = x.TRASHID;
 
-                        cn.Open();
-                        var cmd = new SqlCommand("SP_GetData", cn);
-                        cmd.Parameters.AddWithValue("UHML", x.UHML);
-                        cmd.Parameters.AddWithValue("UI", x.UI);
-                        cmd.Parameters.AddWithValue("STRENGTH", x.STRENGTH);
-                        cmd.Parameters.AddWithValue("SFI", x.SFI);
-                        cmd.Parameters.AddWithValue("MIC", x.MIC);
-                        cmd.Parameters.AddWithValue("COLORGRADE", x.COLORGRADE);
-                        cmd.Parameters.AddWithValue("TRASHID", x.TRASHID);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.ExecuteReader();
+                        //cmd.Parameters.AddWithValue("UHML", x.UHML);
+                        //cmd.Parameters.AddWithValue("UI", x.UI);
+                        //cmd.Parameters.AddWithValue("STRENGTH", x.STRENGTH);
+                        //cmd.Parameters.AddWithValue("SFI", x.SFI);
+                        //cmd.Parameters.AddWithValue("MIC", x.MIC);
+                        //cmd.Parameters.AddWithValue("COLORGRADE", x.COLORGRADE);
+                        //cmd.Parameters.AddWithValue("TRASHID", x.TRASHID);
+                        //cmd.CommandType = CommandType.StoredProcedure;
+                        //cmd.ExecuteReader();
                     });
 
+                    //cmd.CommandType = CommandType.StoredProcedure;
+                    //cmd.ExecuteReader();
 
 
                     //using (var rd = cmd.ExecuteReader())
@@ -58,7 +60,7 @@ namespace FileManagerAPI.Repository
                     //}
 
                     return "se ha guardado con exito";
-                }
+                //}
             }
             catch (Exception e)
             {

@@ -13,6 +13,6 @@
 
     public class ListHVI
     {
-        public List<HVI> HVIList { get; set; }
+        public List<HVI> HVIList { get; set; } = new List<HVI>();
     }
 }
