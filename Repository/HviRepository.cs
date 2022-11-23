@@ -16,19 +16,34 @@ namespace FileManagerAPI.Repository
         {
             try
             {
-                //HVI ob = new();
 
-                //using (SqlConnection cn = new(sqlString.GetCadenaSQL()))
-                //{
-                //    cn.Open();
-                //    var cmd = new SqlCommand("SP_GetData", cn);
-                    //cmd.Parameters.AddWithValue("UHML", model.UHML);
-                    //cmd.Parameters.AddWithValue("UI", model.UI);
-                    //cmd.Parameters.AddWithValue("STR", model.STR);
-                    //cmd.Parameters.AddWithValue("ELONG", model.ELONG);
-                    ////cmd.Parameters.AddWithValue("SFI", model.SFI);
-                    //cmd.CommandType = CommandType.StoredProcedure;
-                    //cmd.ExecuteReader();
+                using (SqlConnection cn = new(sqlString.GetCadenaSQL()))
+                {
+
+                    model.ForEach(x =>
+                    {
+                        var UHML = x.UHML;
+                        var UI = x.UI;
+                        var STRENGTH = x.STRENGTH;
+                        var SFI = x.SFI;
+                        var MIC = x.MIC;
+                        var COLORGRADE = x.COLORGRADE;
+                        var TRASHID = x.TRASHID;
+
+                        cn.Open();
+                        var cmd = new SqlCommand("SP_GetData", cn);
+                        cmd.Parameters.AddWithValue("UHML", x.UHML);
+                        cmd.Parameters.AddWithValue("UI", x.UI);
+                        cmd.Parameters.AddWithValue("STRENGTH", x.STRENGTH);
+                        cmd.Parameters.AddWithValue("SFI", x.SFI);
+                        cmd.Parameters.AddWithValue("MIC", x.MIC);
+                        cmd.Parameters.AddWithValue("COLORGRADE", x.COLORGRADE);
+                        cmd.Parameters.AddWithValue("TRASHID", x.TRASHID);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.ExecuteReader();
+                    });
+
+
 
                     //using (var rd = cmd.ExecuteReader())
                     //{
@@ -43,7 +58,7 @@ namespace FileManagerAPI.Repository
                     //}
 
                     return "se ha guardado con exito";
-                //}
+                }
             }
             catch (Exception e)
             {

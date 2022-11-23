@@ -17,7 +17,7 @@ namespace FileManagerAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<HVI>> TestingFileUploadToDB(ListHVI model)
+        public async Task<ActionResult<HVI>> FileUploadToDB(ListHVI model)
         {
             try
             {
