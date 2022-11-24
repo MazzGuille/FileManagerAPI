@@ -1,14 +1,14 @@
 ﻿namespace FileManagerAPI.Models
 {
     public class HVI
-    {        
-        public decimal UHML { get; set; }
-        public decimal UI { get; set; }
-        public decimal STRENGTH { get; set; }
-        public decimal SFI { get; set; }
-        public decimal MIC { get; set; }
-        public decimal COLORGRADE { get; set; }
-        public decimal TRASHID { get; set; }
+    {
+        public decimal Uhml { get; set; }
+        public decimal Ui { get; set; }
+        public decimal Strength { get; set; }
+        public decimal Sfi { get; set; }
+        public decimal Mic { get; set; }
+        public decimal Colorgrade { get; set; }
+        public decimal Trashid { get; set; }
     }
 
     public class ListHVI
