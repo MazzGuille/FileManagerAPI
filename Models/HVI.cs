@@ -24,7 +24,6 @@ namespace FileManagerAPI.Models
 
         [JsonProperty("TRASHID")]
         public decimal Trashid { get; set; }
-
     }
 
     public class ListHVI
