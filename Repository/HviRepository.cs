@@ -46,18 +46,17 @@ namespace FileManagerAPI.Repository
                     //cmd.CommandType = CommandType.StoredProcedure;
                     //cmd.ExecuteReader();
 
-
-                    //using (var rd = cmd.ExecuteReader())
-                    //{
-                    //    while (rd.Read())
-                    //    {
-                    //        model.Append<> = (decimal)rd["UHML"];
-                    //        model.UI = (decimal)rd["UI"];
-                    //        model.STR = (decimal)rd["STR"];
-                    //        model.ELONG = (decimal)rd["ELONG"];
-                    //        model.SFI = (decimal)rd["SFI"];
-                    //    }
-                    //}
+                //using (var rd = cmd.ExecuteReader())
+                //{
+                //    while (rd.Read())
+                //    {
+                //        model.Append<> = (decimal)rd["UHML"];
+                //        model.UI = (decimal)rd["UI"];
+                //        model.STR = (decimal)rd["STR"];
+                //        model.ELONG = (decimal)rd["ELONG"];
+                //        model.SFI = (decimal)rd["SFI"];
+                //    }
+                //}
 
                     return "se ha guardado con exito";
                 //}
