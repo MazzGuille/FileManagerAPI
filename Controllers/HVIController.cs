@@ -21,7 +21,7 @@ namespace FileManagerAPI.Controllers
         {
             try
             {
-                var response = await _hviRepository.UploadHVI(model.HVIList);
+                var response = await _hviRepository.UploadHVI(model.HVIList, model.Title);
                 return Ok(response);
             }
             catch (Exception e)

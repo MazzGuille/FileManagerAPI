@@ -24,10 +24,12 @@ namespace FileManagerAPI.Models
 
         [JsonProperty("TRASHID")]
         public decimal Trashid { get; set; }
+
     }
 
     public class ListHVI
     {
         public List<HVI> HVIList { get; set; } = new List<HVI>();
+        public string? Title { get; set; }
     }
 }
