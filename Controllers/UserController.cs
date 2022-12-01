@@ -62,7 +62,7 @@ namespace FileManagerAPI.Controllers
                         HttpOnly = true,
                     });
 
-                    return Ok("Login successful");
+                    return Ok(user);
                 }
                 else
                 {

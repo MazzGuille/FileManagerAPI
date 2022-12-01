@@ -36,7 +36,7 @@ namespace FileManagerAPI.Repository
                         cmd.ExecuteReader();
                     }
                 });
-                return "se ha guardado con exito";
+                return await Task.FromResult("se ha guardado con exito");
             }
             catch (Exception e)
             {

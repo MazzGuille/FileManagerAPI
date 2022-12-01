@@ -94,6 +94,7 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddScoped<ILoginRepository, LoginRepository>();
     builder.Services.AddScoped<JWTConfiguration>();
     builder.Services.AddScoped<IHviRepository, HviRepository>();
+    builder.Services.AddScoped<IRecapRepository, RecapRepository>();
 
 }
 
