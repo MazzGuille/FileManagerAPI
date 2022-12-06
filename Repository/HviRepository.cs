@@ -30,7 +30,7 @@ namespace FileManagerAPI.Repository
                         cmd.Parameters.AddWithValue("MIC", x.Mic);
                         cmd.Parameters.AddWithValue("COLORGRADE", x.Colorgrade);
                         cmd.Parameters.AddWithValue("TRASHID", x.Trashid);
-                        cmd.Parameters.AddWithValue("FileName", title);
+                        //cmd.Parameters.AddWithValue("FileName", title);
 
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.ExecuteReader();
