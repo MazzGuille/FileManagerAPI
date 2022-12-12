@@ -41,8 +41,34 @@ namespace FileManagerAPI.Repository
             catch (Exception e)
             {
                 throw new Exception(e.Message);
+
             }
 
         }
+
+        //private async Task<int> HviIdentifier()
+        //{
+        //    try
+        //    {
+        //        int TitleId;
+        //        using (SqlConnection cn = new(sqlString.GetCadenaSQL()))
+        //        {
+        //            cn.Open();
+        //            var cmd = new SqlCommand("SP_Identifier", cn);
+
+        //            cmd.Parameters.AddWithValue("TitleId", TitleId);
+
+        //            cmd.CommandType = CommandType.StoredProcedure;
+        //            cmd.ExecuteNonQuery();
+        //        }
+
+        //        return await Task.FromResult(TitleId);
+        //    }
+        //    catch (Exception e)
+        //    {
+
+        //        throw new Exception(e.Message);
+        //    }
+        //}
     }
 }
