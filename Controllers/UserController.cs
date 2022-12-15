@@ -77,16 +77,6 @@ namespace FileManagerAPI.Controllers
             }
         }
 
-        [HttpPost("logout")]
-        public IActionResult Logout()
-        {
-            Response.Cookies.Delete("jwt");
-
-            return Ok(new
-            {
-                message = "Success"
-            });
-        }
 
         [HttpGet("user")]
         public async Task<IActionResult> User()
@@ -110,6 +100,17 @@ namespace FileManagerAPI.Controllers
             {
                 return Unauthorized();
             }
+        }
+
+        [HttpPost("logout")]
+        public IActionResult Logout()
+        {
+            Response.Cookies.Delete("jwt");
+
+            return Ok(new
+            {
+                message = "Success"
+            });
         }
 
     }
