@@ -4,6 +4,8 @@ using FileManagerAPI.Repository;
 using FileManagerAPI.Repository.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RestSharp;
+using System.Net;
 
 namespace FileManagerAPI.Controllers
 {
@@ -105,6 +107,7 @@ namespace FileManagerAPI.Controllers
         [HttpPost("logout")]
         public IActionResult Logout()
         {
+
             Response.Cookies.Delete("jwt");
 
             return Ok(new
