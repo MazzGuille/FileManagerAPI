@@ -9,9 +9,9 @@ namespace FileManagerAPI.Repository
     public class LoginRepository : ILoginRepository
     {
         //CODIGOS REUTILIZABLES, ESTAN EN LA CARPETA "HELPERS"
-        SQLString sqlString = new(); //INSTANCIA PARA ACCEDER A LA CADENA DE CONEXION
-        Encrypt encrypt = new(); //INSTANCIA PARA ENCRIPTAR LA CONTRASEÑA        
-        JWTConfiguration jwtString = new();  //INSTANCIA PARA APLICAR EL JWT
+        readonly SQLString sqlString = new(); //INSTANCIA PARA ACCEDER A LA CADENA DE CONEXION
+        readonly Encrypt encrypt = new(); //INSTANCIA PARA ENCRIPTAR LA CONTRASEÑA        
+        readonly JWTConfiguration jwtString = new();  //INSTANCIA PARA APLICAR EL JWT
 
         public async Task<string> Login(UserLogin user)
         {
