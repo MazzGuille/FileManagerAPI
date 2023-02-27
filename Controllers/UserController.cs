@@ -43,7 +43,6 @@ namespace FileManagerAPI.Controllers
             }
             catch (Exception e)
             {
-
                 throw new Exception(e.Message);
             }
         }
@@ -74,7 +73,6 @@ namespace FileManagerAPI.Controllers
             }
             catch (Exception e)
             {
-
                 throw new Exception(e.Message);
             }
         }
